@@ -11,10 +11,10 @@
 <style>
 :root{
   --bg:#f6f4ee; --card:#ffffff; --fg:#14223d; --muted:#5d6678; --line:#e3e0d5;
-  --navy:#14223d; --gold:#c9972b; --green:#2f8f6b; --ring:#c9972b55;
+  --navy:#14223d; --navy-fill:#1d3a8a; --gold:#c9972b; --green:#2f8f6b; --ring:#c9972b55;
 }
 @media (prefers-color-scheme: dark){
-  :root{ --bg:#0e1626; --card:#16213a; --fg:#f2efe6; --muted:#a3acbf; --line:#26324f; --navy:#f2efe6; --gold:#e0b04a; --green:#4cb68c; --ring:#e0b04a55; }
+  :root{ --bg:#0e1626; --card:#16213a; --fg:#f2efe6; --muted:#a3acbf; --line:#26324f; --navy:#f2efe6; --navy-fill:#2b4fb8; --gold:#e0b04a; --green:#4cb68c; --ring:#e0b04a55; }
 }
 *{box-sizing:border-box}
 html{color-scheme:light dark}
@@ -32,6 +32,11 @@ a.link:hover,a.link:focus-visible{transform:translateY(-2px);border-color:var(--
 .txt b{display:block;font-family:Montserrat,sans-serif;font-weight:700;font-size:1rem}
 .txt span{display:block;color:var(--muted);font-size:.88rem}
 .arrow{color:var(--gold);font-weight:700}
+a.link.featured{background:var(--navy-fill);border-color:var(--navy-fill);color:#fff}
+a.link.featured .txt span{color:#d9deea}
+a.link.featured .arrow{color:var(--gold)}
+a.link.featured .dot{background:#ffffff22}
+a.link.featured:hover,a.link.featured:focus-visible{border-color:var(--gold)}
 footer{margin-top:36px;text-align:center;color:var(--muted);font-size:.8rem}
 </style>
 </head>
@@ -43,7 +48,7 @@ footer{margin-top:36px;text-align:center;color:var(--muted);font-size:.8rem}
     <p>Todo lo del equipo en un solo lugar.</p>
   </header>
   <ul>
-    <li><a class="link" style="--c:var(--gold)" href="https://reinadaniela7-debug.github.io/Encuesta-NPS/?c=xpzc8vuva7" target="_blank" rel="noopener">
+    <li><a class="link featured" href="https://reinadaniela7-debug.github.io/Encuesta-NPS/?c=xpzc8vuva7" target="_blank" rel="noopener">
       <span class="dot">📊</span><span class="txt"><b>Encuesta Inteligencia Colaborativa</b><span>Encuesta anónima · 5 minutos</span></span><span class="arrow">→</span></a></li>
     <li><a class="link" style="--c:var(--gold)" href="https://isabolivarmendez.github.io/CumplesIENN/#calendario" target="_blank" rel="noopener">
       <span class="dot">🎂</span><span class="txt"><b>IENN · Cumpleaños</b><span>Calendario de cumpleaños</span></span><span class="arrow">→</span></a></li>
